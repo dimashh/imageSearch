@@ -11,14 +11,15 @@ class Search extends Component {
     this.setState({ value: e.target.value })
   };
 
-  handleSearch = () => {
-
+  handleSearch = (event) => {
+    event.preventDefault();
+    this.props.onSearchSubmit(this.state.value);
   };
 
   render() {
     return (
       <div>
-        <h1>Welcome to the imag search app</h1>
+        <h1>Welcome to the image search app</h1>
         <input
           name="text"
           type="type"
