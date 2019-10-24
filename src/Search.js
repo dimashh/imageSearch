@@ -19,15 +19,17 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to the image search app</h1>
-        <input
-          name="text"
-          type="type"
-          placeholder="Search"
-          onChange={e => this.onChange(e)}
-          value={this.state.value}
-        />
-        <button onClick={this.handleSearch}>Search</button>
+        <form onSubmit={this.handleSearch} >
+          <h1>Welcome to the image search app</h1>
+          <input
+            name="text"
+            type="type"
+            placeholder="Search"
+            onChange={e => this.onChange(e)}
+            value={this.state.value}
+          />
+          <button onClick={this.handleSearch}>Search</button>
+          </form>
       </div>
     );
   }
